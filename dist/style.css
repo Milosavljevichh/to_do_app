@@ -72,12 +72,32 @@ ul li, #projects-list {
 
 /* DISPLAY */
 #workspace {
-    padding: 2.5%;
+    position: relative;
     width: 75vw;
-    background-color: #ffc0cb;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
+#workspace:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 75vw;
+    height: 100%;
+    opacity: 0.6;
+    background-image: url(imgs/pattern.jpg);
+    background-size: contain;
+    z-index: -1;
+  }
+
 #workspace-header {
+    padding: 2.5%;
+    background-color: #69d2e7e0;
+    border-bottom: 2.2px solid black;
+    height: 12vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -93,6 +113,20 @@ ul li, #projects-list {
 #add-task {
     display: flex;
     align-items: center;
+}
+
+#workspace-display {
+    padding: 2.3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#left-display, #right-display {
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 /* MODAL */
@@ -111,4 +145,45 @@ ul li, #projects-list {
 
 .dropdown {
     background-color: #ff5733 ;
+}
+
+
+/* todo */
+#todo {
+    position: relative;
+    width: 100%;
+    height: 191px;
+    padding: 4%;
+    background-color: #ff5733;
+    border: 2.2px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#todo:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 13px;
+    border-left: 10px solid #40d39c ;
+    pointer-events: none;
+  }
+
+#todo img {
+    width: 30px;
+}
+
+#todo-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+#todo-btns .nb-button {
+    padding: 5px 15px;
 }

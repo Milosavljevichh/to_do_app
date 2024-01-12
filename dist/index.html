@@ -36,7 +36,7 @@
             <div id="workspace-header">
                 <h1>Project title</h1>
                 <input type="checkbox" id="modal">
-                <label for="modal" class="nb-button rounded orange">Open Modal</label>
+                <label for="modal" class="nb-button rounded orange">Add task</label>
                 <label for="modal" class="modal-background"></label>
                 <div class="modal dialog">
                    <div class="modal-header">
@@ -48,14 +48,77 @@
                         <input class="nb-input orange" placeholder="Text" />
                         <input class="nb-input orange" placeholder="Text" type="date" />
                         <select class="dropdown">
-                            <option value="option1">Option 1</option>
-                            <option value="option2">Option 2</option>
-                            <option value="option3">Option 3</option>
+                            <option value="option1">None</option>
+                            <option value="option2">Low</option>
+                            <option value="option3">Medium</option>
+                            <option value="option3">High</option>
                          </select>
                     </div>
                 </div>
             </div>
             <div id="workspace-display">
+
+                <div id="left-display">
+                    <div id="todo">
+                        <h2>Title todo</h2>
+                        <p>due date</p>
+                        <div id="todo-btns">
+                            <div id="left">
+                                <button class="nb-button green rounded">
+                                    <img src="imgs/add.png" alt="">
+                                </button>
+                                <button class="nb-button default rounded">
+                                    <img src="imgs/add.png" alt="">
+                                </button>
+                            </div>
+                            <div id="right">
+                                <button class="nb-button blue rounded">
+                                    <img src="imgs/add.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="todo">
+                        <h2>Title todo</h2>
+                        <p>due date</p>
+                        <div id="todo-btns">
+                            <div id="left">
+                                <button class="nb-button green rounded">
+                                    <img src="imgs/add.png" alt="">
+                                </button>
+                                <button class="nb-button default rounded">
+                                    <img src="imgs/add.png" alt="">
+                                </button>
+                            </div>
+                            <div id="right">
+                                <button class="nb-button blue rounded">
+                                    <img src="imgs/add.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="right-display">
+                    <div id="todo">
+                        <h2>Title todo</h2>
+                        <p>due date</p>
+                        <div id="todo-btns">
+                            <div id="left">
+                                <button class="nb-button green rounded">
+                                    <img src="imgs/add.png" alt="">
+                                </button>
+                                <button class="nb-button default rounded">
+                                    <img src="imgs/add.png" alt="">
+                                </button>
+                            </div>
+                            <div id="right">
+                                <button class="nb-button blue rounded">
+                                    <img src="imgs/add.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </section>
