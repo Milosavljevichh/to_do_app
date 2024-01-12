@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo</title>
+    <title>ToDy List</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/neobrutalismcss@latest" />
     <script src="main.js" defer></script>
 </head>
 <body>
@@ -13,10 +14,10 @@
         <aside>
             <header>
                 <img src="imgs/logo.png" alt="">
-                <h1>App Title</h1>
+                <h1>ToDy List</h1>
             </header>
             <div id="aside-btns">
-                <button id="add-project">
+                <button id="add-project" class="nb-button orange rounded">
                     <img src="imgs/add.png" alt="">
                     <p>Add project</p>
                 </button>
@@ -34,9 +35,25 @@
         <section id="workspace">
             <div id="workspace-header">
                 <h1>Project title</h1>
-                <button id="add_task">
-                    <img src="imgs/add.png" alt="">
-                </button>
+                <input type="checkbox" id="modal">
+                <label for="modal" class="nb-button rounded orange">Open Modal</label>
+                <label for="modal" class="modal-background"></label>
+                <div class="modal dialog">
+                   <div class="modal-header">
+                      <h3> Create Todo</h3>
+                      <label for="modal" class="close"></label>
+                   </div>
+                    <div id="input-container">
+                        <input class="nb-input orange" placeholder="Text" />
+                        <input class="nb-input orange" placeholder="Text" />
+                        <input class="nb-input orange" placeholder="Text" type="date" />
+                        <select class="dropdown">
+                            <option value="option1">Option 1</option>
+                            <option value="option2">Option 2</option>
+                            <option value="option3">Option 3</option>
+                         </select>
+                    </div>
+                </div>
             </div>
             <div id="workspace-display">
 
