@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    height: 100%;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+/* ASIDE */
+aside {
+    width: 25vw;
+    height: 100%;
+    background-color: brown;
+}
+
+header {
+    height: 12%;
+    background-color: darkslateblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+header, #aside-btns, #projects-list {
+    padding-left: 13%;
+}
+
+#add-project {
+    margin: 20px 0;
+    padding: 2% 3%;
+    width: 70%;
+    border-radius: 5px;
+    background-color: cadetblue;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+}
+
+#add-project img, #add-project p {
+    justify-self: center;
+}
+
+#add-project img, #workspace-header img {
+    width: 32px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 6%;
+}
+
+ul li, #projects-list {
+    font-size: 1.25rem;
+}
+
+#projects-list{
+    color: white;
+}
+
+/* DISPLAY */
+#workspace {
+    padding: 2.5%;
+    width: 75vw;
+    background-color: darkolivegreen;
+}
+
+#workspace-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    text-align: center;
+}
+
+#workspace-header h1 {
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 1.7rem;
+}
