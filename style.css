@@ -145,6 +145,16 @@ ul li, #projects-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 2.5px solid black;
+    background: #bc98cb ;
 }
 
 #left-display, #right-display {
@@ -170,6 +180,18 @@ ul li, #projects-list {
 
 .dropdown {
     background-color: #ff5733 ;
+}
+
+#project-modal {
+    display: none
+}
+
+#project-modal:checked ~ .modal,#project-modal:checked ~ .modal-background {
+    display: block
+}
+
+.modal-header {
+    text-align: center;
 }
 
 
