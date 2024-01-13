@@ -68,7 +68,7 @@ header img {
     width: 48px;
 }
 
-#add-project {
+#add-project, #add-project-title {
     margin: 20px 0;
     padding: 2% 3%;
     width: 70%;
@@ -82,7 +82,7 @@ header img {
     justify-self: center;
 }
 
-#add-project img, #workspace-header img {
+#add-project img, #workspace-header img, #add-project-title img {
     width: 32px;
 }
 
