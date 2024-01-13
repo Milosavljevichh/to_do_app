@@ -12,9 +12,9 @@ export default function create_new_todo(title, description, due_date, priority) 
         }
     }
 
-    const new_todo = new Todo(title.value, description.value, due_date.value, priority.value);
+    const new_todo = new Todo(title, description, due_date, priority);
 
-    localStorage.setItem('todo_'+title.value, JSON.stringify(new_todo))
+    localStorage.setItem('todo_'+title, JSON.stringify(new_todo))
 
     add_todo_to_DOM(new_todo);
 };
