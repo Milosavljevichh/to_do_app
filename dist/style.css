@@ -235,3 +235,8 @@ ul li, #projects-list {
 #todo-btns .nb-button {
     padding: 5px 15px;
 }
+
+#left {
+    display: flex;
+    gap: 13px;
+}

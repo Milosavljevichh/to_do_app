@@ -1,3 +1,5 @@
+import change_workspace_display from "./change-workspace-display";
+
 export default function create_new_project(new_title){
     const current_title = document.getElementById('workspace-header').querySelector('h1');
     const ul = document.getElementById('projects-list').querySelector('ul');
@@ -12,7 +14,7 @@ export default function create_new_project(new_title){
     p.innerHTML = new_title;
 
     p.addEventListener('click', ()=> {
-        console.log(new_title);
+        change_workspace_display(new_title);
     })
 
     li.appendChild(p);
