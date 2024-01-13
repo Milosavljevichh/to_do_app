@@ -1,5 +1,6 @@
 import create_new_project from "./create-new-project"
 import create_new_todo from "./create_new_todo";
+import load_projects from "./loading-projects";
 
  const add_project = document.getElementById('add-project-title');
  const title_input = document.getElementById('project-title');
@@ -15,8 +16,10 @@ add_project.addEventListener('click', ()=>{
     create_new_project(new_project_title);
 });
 
-create_new_project('default');
+localStorage.setItem('project_default', 'default')
+load_projects()
+
 
 new_todo_btn.addEventListener('click',  ()=>{
     create_new_todo(title, description, due_date, priority);
-})
+});
