@@ -34,9 +34,7 @@
             <div id="projects-list">
                 <h3>Projects:</h3>
                 <ul>
-                    <li>
-                        <p id="project_default">Default</p>
-                    </li>
+                    
                 </ul>
             </div>
             <div class="marquee" id="marquee">
@@ -65,33 +63,34 @@
                         <input id="todo-description" class="nb-input orange" placeholder="Description" />
                         <input id="todo-dueDate" class="nb-input orange" placeholder="Due date" type="date" />
                         <select id="todo-priority" class="dropdown">
-                            <option value="" disabled selected>Priority</option>
                             <option value="none">None</option>
                             <option value="low">Low</option>
                             <option value="medium">Medium</option>
                             <option value="high">High</option>
-                         </select>
+                        </select>
+                        <label for="modal" id="add-new-todo" class="nb-button rounded green"><img src="imgs/add.png" alt="">Confirm</label>
                     </div>
                 </div>
             </div>
             <div id="workspace-display">
 <!-- About to be deleted -->
                 <div id="left-display">
+
                     <div id="todo" class="card">
                         <h2>Title todo</h2>
                         <p>due date</p>
                         <div id="todo-btns">
                             <div id="left">
                                 <button class="nb-button green rounded">
-                                    <img src="imgs/add.png" alt="">
+                                    <img src="imgs/check.png" alt="">
                                 </button>
                                 <button class="nb-button default rounded">
-                                    <img src="imgs/add.png" alt="">
+                                    <img src="imgs/edit.png" alt="">
                                 </button>
                             </div>
                             <div id="right">
                                 <button class="nb-button blue rounded">
-                                    <img src="imgs/add.png" alt="">
+                                    <img src="imgs/delete.png" alt="">
                                 </button>
                             </div>
                         </div>
@@ -99,6 +98,7 @@
                     
                 </div>
                 <div id="right-display">
+                    
                     
                 </div>
             </div>
