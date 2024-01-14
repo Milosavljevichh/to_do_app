@@ -114,7 +114,7 @@ ul li, #projects-list {
     height: 100%;
     opacity: 0.6;
     background-image: url(imgs/pattern.jpg);
-    background-size: contain;
+    background-size:75%;
     z-index: -1;
   }
 

@@ -1,4 +1,5 @@
 import delete_todo from "./delete-todo";
+import complete_todo from "./complete-todo";
 
 export default function add_todo_to_DOM(todo) {
     const display_left = document.getElementById('left-display');
@@ -61,5 +62,9 @@ export default function add_todo_to_DOM(todo) {
     
     delete_btn.addEventListener('click',()=>{
         delete_todo(card, todo);
-    })
+    });
+
+    complete_btn.addEventListener('click',()=>{
+        complete_todo(card, todo);
+    });
 };
