@@ -18,11 +18,12 @@ export default function create_new_project(new_title){
         change_workspace_display(new_title);
         load_todos(new_title)
     })
-
+    
     li.appendChild(p);
     ul.appendChild(li);
-
+    
     localStorage.setItem('project_'+new_title, new_title)
-
+    
     title_input.value = '';
+    change_workspace_display(new_title);
 };

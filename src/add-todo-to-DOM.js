@@ -1,3 +1,5 @@
+import delete_todo from "./delete-todo";
+
 export default function add_todo_to_DOM(todo) {
     const display_left = document.getElementById('left-display');
     const display_right = document.getElementById('right-display');
@@ -38,9 +40,10 @@ export default function add_todo_to_DOM(todo) {
     edit_img.src = 'imgs/edit.png'
     delete_img.src = 'imgs/delete.png'
 
+    
     title.innerHTML = todo.title;
     due.innerHTML = todo.due_date;
-
+    
     complete_btn.appendChild(completed_img)
     edit_btn.appendChild(edit_img)
     delete_btn.appendChild(delete_img)
@@ -49,10 +52,14 @@ export default function add_todo_to_DOM(todo) {
     btn_container.append(left_btns, right_btns)
     card.append(title,due,btn_container)
 
-
+    
     if (left_todos.length > right_todos.length) {
         display_right.appendChild(card)
     } else {
         display_left.appendChild(card)
     }
+    
+    delete_btn.addEventListener('click',()=>{
+        delete_todo(card, todo);
+    })
 };
