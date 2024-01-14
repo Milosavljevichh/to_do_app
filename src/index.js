@@ -3,6 +3,7 @@ import create_new_todo from "./create_new_todo";
 import load_projects from "./loading-projects";
 import load_todos from "./loading-todos";
 import delete_project from "./delete-project";
+import change_workspace_display from "./change-workspace-display";
 
  const add_project = document.getElementById('add-project-title');
  const title_input = document.getElementById('project-title');
@@ -26,7 +27,7 @@ delete_project_button.addEventListener('click', ()=>{
 localStorage.setItem('project_default', 'default')
 load_projects()
 load_todos('default')
-
+change_workspace_display('default')
 
 new_todo_btn.addEventListener('click',  ()=>{
     create_new_todo(title.value, description.value, due_date.value, priority.value);
