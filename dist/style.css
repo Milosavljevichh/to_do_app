@@ -135,6 +135,14 @@ ul li, #projects-list {
     font-size: 1.7rem;
 }
 
+#delete-project {
+    padding: 5px 20px;
+}
+
+#delete-project img {
+    width: 26px;
+}
+
 #add-task {
     display: flex;
     align-items: center;
