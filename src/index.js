@@ -31,4 +31,8 @@ load_todos('default')
 
 new_todo_btn.addEventListener('click',  ()=>{
     create_new_todo(title.value, description.value, due_date.value, priority.value);
+    title.value = '';
+    description.value = '';
+    due_date.value = '';
+    priority.value = '';
 });
