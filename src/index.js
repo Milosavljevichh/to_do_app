@@ -26,8 +26,8 @@ delete_project_button.addEventListener('click', ()=>{
 
 localStorage.setItem('project_default', 'default')
 load_projects()
-load_todos('default')
 change_workspace_display('default')
+load_todos('default')
 
 new_todo_btn.addEventListener('click',  ()=>{
     create_new_todo(title.value, description.value, due_date.value, priority.value);
