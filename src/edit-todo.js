@@ -1,3 +1,4 @@
+
 export default function edit_todo(title, description, due_date, priority, original_todo) {
     const modal = document.getElementById('modal');
     const title_input = document.getElementById('todo-title')
@@ -11,6 +12,11 @@ export default function edit_todo(title, description, due_date, priority, origin
     description_input.value = description
     due_date_input.value = due_date
     priority_input.value = priority
+    
+    original_todo.remove();
+    localStorage.removeItem('todo_'+title)
 
-    original_todo.remove()
+    modal.disabled = 'disabled'
+    
+
 }

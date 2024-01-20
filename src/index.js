@@ -31,6 +31,7 @@ change_workspace_display('default')
 load_todos('default')
 
 new_todo_btn.addEventListener('click',  ()=>{
+    modal.disabled = false
     create_new_todo(title.value, description.value, due_date.value, priority.value);
 });
 
