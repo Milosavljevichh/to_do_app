@@ -202,6 +202,25 @@ ul li, #projects-list {
     text-align: center;
 }
 
+#bottom-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+}
+
+#bottom-div .nb-button {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+#bottom-div .nb-button img {
+    width: 20px;
+}
+
 
 /* todo */
 #todo {
@@ -247,4 +266,8 @@ ul li, #projects-list {
 #left {
     display: flex;
     gap: 13px;
+}
+
+#nonee {
+    pointer-events: none;
 }

@@ -62,15 +62,17 @@
                         <input id="todo-title" class="nb-input orange" placeholder="Title" />
                         <input id="todo-description" class="nb-input orange" placeholder="Description" />
                         <input id="todo-dueDate" class="nb-input orange" placeholder="Due date" type="date" />
-                        <select id="todo-priority" class="dropdown">
-                            <option value="none">None</option>
-                            <option value="low">Low</option>
-                            <option value="medium">Medium</option>
-                            <option value="high">High</option>
-                        </select>
-                        <button id="add-new-todo">
-                            <label for="modal" class="nb-button rounded green"><img src="imgs/add.png" alt="">Confirm</label>
-                        </button>
+                        <div id="bottom-div">
+                            <select id="todo-priority" class="dropdown">
+                                <option value="none" selected="selected">None</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                            <button id="add-new-todo">
+                                <label for="modal" class="nb-button rounded green"><img src="imgs/add.png" alt="">Confirm</label>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <button id="delete-project" class="nb-button blue rounded">
@@ -78,7 +80,6 @@
                 </button>
             </div>
             <div id="workspace-display">
-<!-- About to be deleted -->
                 <div id="left-display">
                     
                 </div>
