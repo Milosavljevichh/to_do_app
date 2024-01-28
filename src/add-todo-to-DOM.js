@@ -27,6 +27,26 @@ export default function add_todo_to_DOM(todo) {
 
 
     card.id = 'todo';
+
+    switch (todo.priority) {
+        case 'none': 
+            card.classList.add('nonePriority');
+            break;
+            
+            case 'low':
+                card.classList.add('lowPriority');
+                break;
+                
+                case 'medium':
+                    card.classList.add('medPriority');
+            break;
+        case 'high':
+            card.classList.add('highPriority');
+            break;
+        default:
+            card.classList.add('nonePriority');
+    }
+
     card.classList.add('card')
     btn_container.id = 'todo-btns'
     left_btns.id = 'left'
@@ -78,7 +98,7 @@ export default function add_todo_to_DOM(todo) {
     });
 
     edit_btn.addEventListener('click', ()=>{
-        edit_todo(todo.title, todo.description, todo.due_date, todo.priority, card);
+        edit_todo(todo.id, todo.title, todo.description, todo.due_date, todo.priority, card);
     })
 
 };

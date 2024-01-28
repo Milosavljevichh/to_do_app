@@ -5,7 +5,7 @@ export default function load_todos(category) {
         if (key.includes('todo_')) {
            let todo = JSON.parse(localStorage.getItem(key))
            if (todo.in_category === category){
-            create_new_todo(todo.title, todo.description, todo.due_date, todo.priority)
+            create_new_todo(todo.id, todo.title, todo.description, todo.due_date, todo.priority)
            }
         }
     })

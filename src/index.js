@@ -32,7 +32,9 @@ load_todos('default')
 
 new_todo_btn.addEventListener('click',  ()=>{
     modal.disabled = false
-    create_new_todo(title.value, description.value, due_date.value, priority.value);
+    todoId++;
+    localStorage.setItem('todoId', todoId);
+    create_new_todo(todoId, title.value, description.value, due_date.value, priority.value);
 });
 
 //disable effects that "view-todo" function creates
@@ -47,3 +49,18 @@ modal.addEventListener('click', ()=>{
     priority.readOnly = false;
     add_btn.style.display = 'block'
 })
+
+    let idExists;
+    let todoId = 0;
+
+    Object.keys(localStorage).forEach(key => {
+        if (key === 'todoId') {
+            idExists = true;
+        }
+      });
+    
+    if (!idExists) {
+        todoId = 0;
+    } else {
+        todoId = Number(localStorage.getItem('todoId'));
+    }
