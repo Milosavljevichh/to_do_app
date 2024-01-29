@@ -4,7 +4,9 @@ import load_projects from "./loading-projects";
 import load_todos from "./loading-todos";
 import delete_project from "./delete-project";
 import change_workspace_display from "./change-workspace-display";
+import validateProjectTitle from "./project-title-validation";
 
+ const a = document.getElementById('add-project');
  const add_project = document.getElementById('add-project-title');
  const title_input = document.getElementById('project-title');
  const title = document.getElementById('todo-title');
@@ -16,9 +18,22 @@ import change_workspace_display from "./change-workspace-display";
  const new_todo_btn = document.getElementById('add-new-todo');
  const add_btn = document.getElementById('add-new-todo')
  
-add_project.addEventListener('click', ()=>{
+ a.addEventListener('click', ()=>{
+    add_project.style.display = 'none';
+ })
+
+ 
+ title_input.addEventListener('input', ()=>{
+     validateProjectTitle();
+    })
+
+    add_project.addEventListener('click', ()=>{
     const new_project_title = title_input.value;
-    create_new_project(new_project_title);
+    if (new_project_title.length !== 0){
+        create_new_project(new_project_title);
+    } else {
+        console.log('nope')
+    }
 });
 
 delete_project_button.addEventListener('click', ()=>{
