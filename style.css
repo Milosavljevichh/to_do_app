@@ -91,8 +91,26 @@ ul {
     padding-left: 6%;
 }
 
+#projects-list {
+    height: 35%;
+    overflow-y: scroll;
+}
+
+#projects-list::-webkit-scrollbar {
+    width: 15px;
+}
+
 ul li, #projects-list {
     font-size: 1.25rem;
+}
+
+ul li p {
+    text-transform: capitalize;
+    cursor: pointer;
+    margin-bottom: 6px;
+    max-width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* DISPLAY */
@@ -133,6 +151,9 @@ ul li, #projects-list {
 #workspace-header h1 {
     text-transform: uppercase;
     font-size: 1.7rem;
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #delete-project {
@@ -229,7 +250,7 @@ ul li, #projects-list {
     width: 100%;
     height: 191px;
     padding: 4%;
-    background-color: #ff5733;
+    background-color: #ff5833ea;
     border: 2.2px solid black;
     border-radius: 15px;
     display: flex;
@@ -250,19 +271,19 @@ ul li, #projects-list {
 }
 
 .nonePriority:before {
-    border-left: grey 10px solid;
+    border-left: transparent 10px solid;
 }
 
 .lowPriority:before {
-    border-left: 10px solid #40d39c ;
+    border-left: 10px solid #85C88A ;
 }
 
 .medPriority:before {
-    border-left: 10px solid pink ;
+    border-left: 10px solid #EBD671 ;
 }
 
 .highPriority:before {
-    border-left: 10px solid brown ;
+    border-left: 10px solid #FE0000 ;
 }
 
 #todo img {
