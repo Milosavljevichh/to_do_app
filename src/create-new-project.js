@@ -14,10 +14,15 @@ export default function create_new_project(new_title){
     p.id = 'project_'+new_title;
     p.innerHTML = new_title;
 
+    if (new_title === 'completed') {
+        p.classList.add('completed-tasks')
+    }
+
     p.addEventListener('click', ()=> {
         change_workspace_display(new_title);
         load_todos(new_title)
     })
+    
     
     li.appendChild(p);
     ul.appendChild(li);

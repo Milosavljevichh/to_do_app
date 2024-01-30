@@ -40,7 +40,8 @@ delete_project_button.addEventListener('click', ()=>{
     delete_project();
 })
 
-localStorage.setItem('project_default', 'default')
+localStorage.setItem('project_default', 'default')   
+localStorage.setItem('project_completed', 'completed')   
 load_projects()
 change_workspace_display('default')
 load_todos('default')
@@ -49,7 +50,7 @@ new_todo_btn.addEventListener('click',  ()=>{
     modal.disabled = false
     todoId++;
     localStorage.setItem('todoId', todoId);
-    create_new_todo(todoId, title.value, description.value, due_date.value, priority.value);
+    create_new_todo(todoId, title.value, description.value, due_date.value, priority.value, document.getElementById('workspace-header').querySelector('h1').innerHTML);
 });
 
 //disable effects that "view-todo" function creates
