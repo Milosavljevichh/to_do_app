@@ -5,8 +5,10 @@ import load_todos from "./loading-todos";
 import delete_project from "./delete-project";
 import change_workspace_display from "./change-workspace-display";
 import validateProjectTitle from "./project-title-validation";
+import validateTodo from "./todo-validation";
 
  const a = document.getElementById('add-project');
+ const modal_new_todo = document.getElementById('modal-new-todo');
  const add_project = document.getElementById('add-project-title');
  const title_input = document.getElementById('project-title');
  const title = document.getElementById('todo-title');
@@ -22,9 +24,17 @@ import validateProjectTitle from "./project-title-validation";
     add_project.style.display = 'none';
  })
 
+    modal_new_todo.addEventListener('click', ()=>{
+        add_btn.style.display = 'none';
+    })
+
  
  title_input.addEventListener('input', ()=>{
      validateProjectTitle();
+    })
+
+    title.addEventListener('input', ()=>{
+        validateTodo();
     })
 
     add_project.addEventListener('click', ()=>{
@@ -63,7 +73,6 @@ modal.addEventListener('click', ()=>{
     description.readOnly = false;
     due_date.readOnly = false;
     priority.readOnly = false;
-    add_btn.style.display = 'block'
 })
 
     let idExists;
